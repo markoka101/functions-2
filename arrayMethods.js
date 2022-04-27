@@ -96,11 +96,13 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 // Do not edit code above.
 
 /*
-  Use a higher order method to get all the order totals after adding in the sales tax (given to you as a tax rate, hint: you'll need to do some multiplication). Your answer should be an array of numbers, one total for each order.
+  Use a higher order method to get all the order totals after adding in the sales tax (given to you as a tax rate, hint: you'll need to do some multiplication). 
+  Your answer should be an array of numbers, one total for each order.
 */
 
 // CODE HERE
-
+const totalOrder = orders.map(elem => (elem['price']*(elem['tax']+1)).toFixed(2));
+console.log(totalOrder);
 
 
 ////////// PROBLEM 6 //////////
@@ -120,3 +122,5 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 // CODE HERE
+const bobsTotal = purchases.filter(elem => elem['owner'] === 'Bob').map(elem => elem['price']).reduce((a, c) => a + c);
+console.log(bobsTotal);
