@@ -211,7 +211,7 @@ getUserById(users, '16t', user => {
 */
 
 // CODE HERE
-const addingFactory = num => inner = num2 => num + num2;
+const addingFactory = num => (fnum) => num + fnum;
 
 /*
   Now that you have addingFactory, you can create other
@@ -226,6 +226,7 @@ const addingFactory = num => inner = num2 => num + num2;
 */
 
 // CODE HERE
+const addTen = addingFactory(10);
 
 /*
   Now the inner function is stored in the addTen variable! 
@@ -238,7 +239,8 @@ const addingFactory = num => inner = num2 => num + num2;
 */
 
 // CODE HERE
-
+console.log(addTen(15));
+console.log(addTen(7));
 /*
   Let's make another function from the addingFactory. 
 
@@ -251,3 +253,5 @@ const addingFactory = num => inner = num2 => num + num2;
 */
 
 // CODE HERE
+const addNumber = addingFactory(7);
+console.log(addNumber(14563135));
